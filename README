@@ -1,0 +1,50 @@
+#
+# Exanto Ordercomments
+#
+This extension enables the customer to write a comment at the end of the
+checkout process. It uses Magentos native comment facility, so it should work
+even in later versions.
+
+### Step 1
+You have to add a small snippet to your Checkout Onepage Agreements Template to
+include the textarea into the checkout process. An example is placed in:
+app/design/frontend/base/default/template/ordercomments/checkout_onepage_agreements.phtml
+
+and you have to put the marked snippet into
+
+app/design/frontend/default/<your_theme>/template/checkout/onepage/agreements.phtml
+
+### Step 2
+Add some CSS to your stylesheet to pretty the input area:
+
+textarea#customerOrderComment {
+    height:100px;
+    margin-top:5px;
+    padding:5px;
+    width:50%;
+}
+
+### Step 3
+Place this snippet in your email templates where the customer comment should appear:
+
+    {{depend order.getEmailCustomerNote()}}
+        <h3 style="border-bottom:2px solid #eee; font-size:1.05em; padding-bottom:1px;">Ihr Kommentar zu dieser Bestellung</h3>
+        <div style="padding:7px 9px 9px 9px; border:1px solid #bebcb7; background:#f8f7f5;">
+            {{var order.getEmailCustomerNote()}}
+        </div>
+        <br />
+    {{/depend}}
+
+### Step 4
+Test, done.
+
+#
+# Notes
+#
+The idea came from http://benz001.posterous.com/adding-customer-order-comments-to-magentos-on
+
+#
+# Contact
+#
+Exanto Internet Solutions
+http://www.exanto.de/

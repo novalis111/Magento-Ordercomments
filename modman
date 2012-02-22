@@ -1,0 +1,6 @@
+# Exanto_Ordercomments
+app/etc/modules/Exanto_Ordercomments.xml                            app/etc/modules/Exanto_Ordercomments.xml
+app/code/community/Exanto/Ordercomments                             app/code/community/Exanto/Ordercomments
+app/design/frontend/base/default/template/ordercomments             app/design/frontend/base/default/template/ordercomments
+app/design/frontend/base/default/layout/ordercomments.xml           app/design/frontend/base/default/layout/ordercomments.xml
+app/locale/de_DE/Exanto_Ordercomments.csv                           app/locale/de_DE/Exanto_Ordercomments.csv

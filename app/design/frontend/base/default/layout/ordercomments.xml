@@ -1,0 +1,14 @@
+<!-- Place our ordercomments form before the agreements in One Page Checkout Review -->
+<layout version="0.1.0">
+    <checkout_onepage_index>
+        <reference name="content">
+            <reference name="checkout.onepage">
+                <reference name="checkout.onepage.review">
+                    <reference name="checkout.onepage.agreements">
+                        <block type="core/template" name="checkout.onepage.ordercomments" as="ordercomments" template="ordercomments/form.phtml"/>
+                    </reference>
+                </reference>
+            </reference>
+        </reference>
+    </checkout_onepage_index>
+</layout>

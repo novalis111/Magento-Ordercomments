@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Exanto_Ordercomments>
+            <version>0.1.0</version>
+        </Exanto_Ordercomments>
+    </modules>
+    <frontend>
+        <layout>
+            <updates>
+                <ordercomments>
+                    <file>ordercomments.xml</file>
+                </ordercomments>
+            </updates>
+        </layout>
+        <events>
+            <checkout_type_onepage_save_order>
+                <observers>
+                    <Exanto_Ordercomments_Onepage>
+                        <type>singleton</type>
+                        <class>exanto_ordercomments_model_observer</class>
+                        <method>setOrderComment</method>
+                    </Exanto_Ordercomments_Onepage>
+                </observers>
+            </checkout_type_onepage_save_order>
+        </events>
+        <translate>
+            <modules>
+                <Exanto_Ordercomments>
+                    <files>
+                        <default>Exanto_Ordercomments.csv</default>
+                    </files>
+                </Exanto_Ordercomments>
+            </modules>
+        </translate>
+    </frontend>
+</config>
